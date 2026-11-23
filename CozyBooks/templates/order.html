@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Order - CozyBooks</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h1>CozyBooks 📚</h1>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/books">Books</a></li>
+            <li><a href="/order">Order</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+
+        <h2>Order Your Book</h2>
+
+        <form method="POST">
+
+            <input type="text"
+
+                   name="customer_name"
+
+                   placeholder="Your Name"
+
+                   required>
+
+            <select name="book_name" required>
+
+                <option value="">Choose a Book</option>
+
+                <option value="The Silent Patient">
+                    The Silent Patient
+                </option>
+
+                <option value="Atomic Habits">
+                    Atomic Habits
+                </option>
+
+                <option value="Harry Potter">
+                    Harry Potter
+                </option>
+
+            </select>
+
+            <button type="submit" class="btn">
+
+                submit
+
+            </button>
+
+        </form>
+        {% if message %}
+        <p class="success-message">
+        {{ message }}
+        </p>
+
+{% endif %}
+
+    </section>
+
+<footer>
+    <p>© 2026 CozyBooks. All rights reserved.</p>
+</footer>
+</body>
+</html>
